@@ -1,0 +1,5 @@
+"0","ggplot(DBZ_Data, "
+"0","       aes(x = Days_Worked_Out, "
+"0","           y = Protein_Shake_Drank,"
+"0","           color = Gender)) +"
+"0","  geom_jitter(width=.1, height = .1)"
