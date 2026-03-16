@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ---
 title: "Davis_Burress_Zuo_Midterm_Project"
 output:
@@ -63,4 +64,37 @@ ggplot(DBZ_Data,
 
 ```{r}
 write.csv(DBZ_Data, "DBZ_Data.csv", row.names = FALSE)
+=======
+---
+title: "Davis_Burress_Zuo_Midterm_Project"
+output:
+  pdf_document: default
+  html_document: default
+date: "2026-03-01"
+---
+
+```{r}
+DBZ_Data <- read.csv("DBZ_Data.csv")
+```
+
+```{r}
+head(DBZ_Data)
+summary(DBZ_Data) 
+str(DBZ_Data)
+```
+```{r}
+library(ggplot2) 
+```
+
+```{r}
+ggplot(DBZ_Data, 
+       aes(x = Days_Worked_Out, 
+           y = Protein_Shake_Drank,
+           color = Gender)) +
+  geom_jitter(width=.1, height = .1)
+```
+
+```{r}
+write.csv(DBZ_Data, "DBZ_Data.csv", row.names = FALSE)
+>>>>>>> cdba25b4f1dbced0c9cbd07b0b36c31c4dd39085
 ```
