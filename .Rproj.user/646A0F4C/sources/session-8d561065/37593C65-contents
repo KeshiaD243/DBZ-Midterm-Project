@@ -1,0 +1,28 @@
+---
+title: "Davis_Burress_Midterm_Proposal"
+output: html_document
+date: "2026-02-11"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Group Members:
+Nikeshia Davis
+Cameron Burress
+
+Proposed Research Goal:
+. Investigate the relationship between how many days per week a student-athlete at Grinnell College consumes a protein-filled beverage and how many days per week they workout. How does this relationship compare between boys and girls? 
+
+Variables:
+Categorical- Boys, Girls
+Numeric- # of days a beverage was drank, # of days the athlete worked out
+
+Collection of Data:
+. We will survey student-athletes that attend the Bear at Grinnell College
+. During each time a team is scheduled to lift at the Bear, we will collect information concerning the two questions on ALL athletes, separating them by gender. Then the data will be compiled once we have covered all teams that lift.
+
+Prior Beliefs About the Data:
+. It is believed by this group that male athletes will consume more protein-filled beverages and workout more often when in comparison to women athletes.
+. We believe that gender will have a relationship with the amount of protein-filled drinks and times a student-athlete works out in a week.
