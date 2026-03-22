@@ -25,6 +25,7 @@ library(ggplot2)
 ggplot(DBZ_Data, 
        aes(x = Days_Worked_Out, 
            y = Protein_Shake_Drank,
-           color = Gender)) +
-  geom_jitter(width=.1, height = .1)
+           color = Gender,
+           shape = Gender)) +
+  geom_jitter(width=.4, height = .3)
 ```
