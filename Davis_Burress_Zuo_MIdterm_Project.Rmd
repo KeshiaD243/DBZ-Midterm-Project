@@ -17,6 +17,7 @@ head(DBZ_Data)
 summary(DBZ_Data) 
 str(DBZ_Data)
 ```
+
 ```{r}
 library(ggplot2) 
 ```
@@ -26,5 +27,5 @@ ggplot(DBZ_Data,
        aes(x = Days_Worked_Out, 
            y = Protein_Shake_Drank,
            color = Gender)) +
-  geom_jitter(width=.1, height = .1)
+  geom_jitter(width=.3, height = .3)
 ```
