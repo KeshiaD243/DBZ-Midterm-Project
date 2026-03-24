@@ -17,7 +17,6 @@ head(DBZ_Data)
 summary(DBZ_Data) 
 str(DBZ_Data)
 ```
-
 ```{r}
 library(ggplot2) 
 ```
@@ -26,6 +25,27 @@ library(ggplot2)
 ggplot(DBZ_Data, 
        aes(x = Days_Worked_Out, 
            y = Protein_Shake_Drank,
-           color = Gender)) +
+           color = Gender,
+           shape = Gender)) +
   geom_jitter(width=.3, height = .3)
+```
+
+
+```{r}
+par(mfrow = c(1, 2))
+
+boxplot(Days_Worked_Out ~ Gender,
+        data = DBZ_Data,
+        main = "Days Worked Out",
+        xlab = "Gender",
+        ylab = "Count",
+        col = c("lightpink", "lightblue"))
+
+boxplot(Protein_Shake_Drank ~ Gender,
+        data = DBZ_Data,
+        main = "Protein Shakes Drank",
+        xlab = "Gender",
+        ylab = "Count",
+        col = c("lightpink", "lightblue"))
+
 ```
