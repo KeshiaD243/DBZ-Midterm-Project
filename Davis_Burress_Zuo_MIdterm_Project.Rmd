@@ -15,21 +15,18 @@ DBZ_Data <- read.csv("DBZ_Data.csv")
 ```{r}
 library(ggplot2) 
 ```
-
 ```{r}
-par(mfrow = c(1, 2))
-
-boxplot(Days_Worked_Out ~ Gender,
-        data = DBZ_Data,
-        main = "Days Worked Out",
-        col = "lightblue", "lightpink",
-        xlab = "Gender",
-        ylab = "Count")
-
-boxplot(Protein_Shake_Drank ~ Gender,
-        data = DBZ_Data,
-        main = "Protein Shakes Drank",
-         col = "lightblue", "lightpink",
-        xlab = "Gender",
-        ylab = "Count")
+ggplot(DBZ_Data, 
+       aes(x = Days_Worked_Out, 
+           y = Protein_Shake_Drank,
+           color = Gender,
+           shape = Gender)) +
+  scale_color_manual(values = c("F" = "hotpink", "M" = "dodgerblue")) +
+  scale_shape_manual(values = c("F" = 8, "M" = 16)) +
+  geom_jitter(width=.8, height = .6) +
+theme_bw(base_size = 15) +
+         ylab("Protein Shakes Drank") +
+         xlab("Days Worked Out") +
+         ggtitle("Exercise and Protein Within Past Week", subtitle = "Male vs Female Athletes ")
 ```
+
